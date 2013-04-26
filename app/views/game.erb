@@ -1,0 +1,7 @@
+<div class="container" id="game_card">
+  <% @deck.cards.each do |card| %>
+    <div id="definition">Definition: <%= card.definition %></div>
+    <div id="answer">Answer: <%= card.answer %></div>
+    <br>
+  <% end %>
+</div>
