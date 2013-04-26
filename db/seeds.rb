@@ -3,12 +3,13 @@ def parse(filename, deck)
     line.split("\n").delete_if {|string| string == " " } 
   end
   hash = Hash[*array.flatten]
-  hash.each {|k, v| deck.cards << Card.create(definition: k, answer: v) }
+  hash.each { |k, v| deck.cards << Card.create(definition: k, answer: v) }
 end
-
-
 
 deck1 = Deck.create(name: 'Ruby', category: 'Programming')
 filename = APP_ROOT.join('db', 'flashcard_samples.txt')
 parse(filename, deck1)
-# deck1.cards << @card_db
+
+deck2 = Deck.create(name: 'US State Capitals', category: 'Geography')
+filename = APP_ROOT.join('db', 'flashcard_samples2.txt')
+parse(filename, deck2)
