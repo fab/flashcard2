@@ -1,0 +1,12 @@
+<header id="header">
+  <h1>Flashcard</h1>
+
+  <ul>
+    <% if session[:user_id] == nil %>
+      <li><a href="/register">Register</a></li>
+    <% else %>
+      <li><a href="/profile">Profile</a></li>
+      <li><a href="/logout">Logout</a></li>
+    <% end %>
+  </ul>
+</header>
