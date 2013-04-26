@@ -11,15 +11,16 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
-
+  <link href='http://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
   <title></title>
 </head>
-<%= partial(:_header) %>
+
 <body>
-  <%= yield %>
+  <%= partial(:_header) %>
+  <div class="content"><%= yield %></div>
+  <%= partial(:_footer) %>
 </body>
-<%= partial(:_footer) %>
 </html>
