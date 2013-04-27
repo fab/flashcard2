@@ -1,5 +1,5 @@
 <div class="container" id="game_card">
-  <div><%= @deck.name %></div>
+<div id="deck_name"><%= @deck.name %></div>
   <% @deck.cards.shuffle.each_with_index do |card, i| %>
   <div class="hidden">
     <div id="definition_<%= i %>"><%= card.definition %></div>
