@@ -21,12 +21,16 @@ post '/register' do
                      email: params["email"], 
                      password: params["password"])
   @errors = user.errors.full_messages
-  return @errors if @errors
+  return @errors if @errors.length > 0
   session[:user_id] = user.id
   redirect '/profile'
 end
 
 get '/profile' do
   @user = User.find(session[:user_id])
+  @decks = Deck.all
   erb :profile
 end
+
+
+

@@ -2,7 +2,6 @@
   margin: auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
 }
 
 th {
@@ -15,7 +14,7 @@ header {
   margin: 0px auto;
   width: 600px;
   position: fixed;
-  background-color: black;
+  background-color: #2B2D31;
   width: 100%;
   z-index: 1;
 }
@@ -46,14 +45,43 @@ header a {
   color: white;
 }
 
+#login_link {
+  text-decoration: none;
+  color: white;
+}
+
 .content {
   padding-top: 64px;
+}
+
+#login_box{
+  position: absolute;
+  margin: 10px 0 0 -170px;
+  background-color: #2B2D31;
+  padding: 10px;
+  -moz-border-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: none;
+}
+
+
+#register_link{
+  margin-top: -18px;
+  display: block;
+  color: white;
+  float: right;
+  padding-right: 30px;
+}
+
+#password_header {
+  margin: 5px 0 7px 0;
 }
 
 footer {
   width: 100%;
   position: fixed;
   bottom: 0;
-  background-color: black;
+  background-color: #2B2D31;
   color: white;
 }
