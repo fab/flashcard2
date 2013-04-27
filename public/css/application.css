@@ -1,9 +1,59 @@
 .container {
-  margin: 20px auto;
+  margin: auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
+
 th {
   text-align: left;
+}
+
+
+
+header {
+  margin: 0px auto;
+  width: 600px;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  z-index: 1;
+}
+
+header h1 {
+  font-family: 'Fugaz One', cursive;
+  color: white;
+  float: left;
+  padding: 0 0 0 30px;
+  margin: 0;
+  line-height: 44px;
+}
+
+header ul {
+  display: inline;
+  float: right;
+  margin: 12px 0 12px 0;
+}
+
+header ul li {
+  display: inline;
+  vertical-align: middle;
+  padding-right: 30px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+.content {
+  padding-top: 64px;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  color: white;
 }
