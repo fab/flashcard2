@@ -2,9 +2,13 @@
   <div id="next_card_btn">Next Card</div>
   <% @deck.cards.each_with_index do |card, i| %>
   <div class="hidden">
-    <div id="definition_<%= i %>">Definition: <%= card.definition %></div>
-    <div id="answer_<%= i %>">Answer: <%= card.answer %></div>
+    <div id="definition_<%= i %>"><%= card.definition %></div>
+    <div id="answers">
+      <div id="answer_<%= i %>"><%= card.answer %></div>
+      <% three_wrong_answers(card).each do |ans| %>
+      <div class="wrong_answer"><%= ans %></div>
+      <% end %>
+    </div> 
   </div>
-    <br>
   <% end %>
 </div>
