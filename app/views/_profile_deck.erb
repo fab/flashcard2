@@ -1,3 +1,8 @@
-<div class='deck_preview' style="background: url('<%= deck.image_url %>'); background-size: cover">
-  <%= deck.name %>
+<div id="deck_holder">
+  <div class='deck_preview' style="background: url('<%= deck.image_url %>'); background-size: cover"></div>
+  <div class='deck_info'>
+    <span class="deck_name"><%= deck.name %></span><br/>
+    <span class="deck_category"><%= deck.category %></span><br/>
+    <span class="deck_card_count"><%= deck.cards.count %> cards</span>
+  </div>
 </div>
