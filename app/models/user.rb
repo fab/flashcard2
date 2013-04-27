@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   validates :email, :uniqueness => true, :email => true
   validates :password, :length => { :minimum => 5}
   before_create :hash_password
+  has_many :rounds
   include BCrypt
 
   def self.authenticate(email, password)

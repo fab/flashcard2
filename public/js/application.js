@@ -4,4 +4,12 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
+  $('.deck_preview').mouseover(function(){
+    $(this).next().fadeIn("fast");
+  });
+
+  $('.deck_info').mouseout(function(){
+    $(this).fadeOut("fast");
+  });
 });
