@@ -6,10 +6,10 @@ def parse(filename, deck)
   hash.each { |k, v| deck.cards << Card.create(definition: k, answer: v) }
 end
 
-deck1 = Deck.create(name: 'Ruby', category: 'Programming')
+deck1 = Deck.create(name: 'Ruby', category: 'Programming', image_url: '/ruby.png')
 filename = APP_ROOT.join('db', 'flashcard_samples.txt')
 parse(filename, deck1)
 
-deck2 = Deck.create(name: 'US State Capitals', category: 'Geography')
+deck2 = Deck.create(name: 'US State Capitals', category: 'Geography', image_url: '/states.jpeg')
 filename = APP_ROOT.join('db', 'flashcard_samples2.txt')
 parse(filename, deck2)
