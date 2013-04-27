@@ -4,9 +4,10 @@ get '/deck/:id/play' do
 end
 
 post '/check_answer' do
-  p params
-  puts data = Card.find(params['card_id']).answer == params['answer'] 
-  data.to_s
+  result = Card.find(params['card_id']).answer == params['answer'] 
+  r = Round.create(user_id: session[:user_id], card_id: params['card_id'], correct: result)
+  p r
+  result.to_s
   #store card, session[:user_id] in round table
   #return true/false or whatever
 end
