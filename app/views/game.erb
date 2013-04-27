@@ -1,0 +1,8 @@
+<div class="container" id="game_card">
+  <div id="next_card_btn">Next Card</div>
+  <% @deck.cards.each_with_index do |card, i| %>
+    <div class="hidden" id="definition_<%= i %>">Definition: <%= card.definition %></div>
+    <div class="hidden" id="answer_<%= i %>">Answer: <%= card.answer %></div>
+    <br>
+  <% end %>
+</div>
