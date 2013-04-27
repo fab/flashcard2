@@ -1,9 +1,9 @@
 <div class="container" id="game_card">
-  <div id="next_card_btn">Next Card</div>
+  <div><%= @deck.name %></div>
   <% @deck.cards.each_with_index do |card, i| %>
   <div class="hidden">
     <div id="definition_<%= i %>"><%= card.definition %></div>
-    <div id="answers">
+    <div class="answers">
        <% multiple_choice_answers(card).each do |card| %>
        <div id="answer_<%= i %>"><%= card.answer %></div>
        <% end %>
@@ -11,4 +11,5 @@
     <input type="hidden" value="<%= card.id %>"/>
   </div>
   <% end %>
+  <div id="next_card_btn">Next Card</div>
 </div>
