@@ -4,11 +4,11 @@
   <div class="hidden">
     <div id="definition_<%= i %>"><%= card.definition %></div>
     <div id="answers">
-      <div id="answer_<%= i %>"><%= card.answer %></div>
-      <% three_wrong_answers(card).each do |ans| %>
-      <div class="wrong_answer"><%= ans %></div>
-      <% end %>
+       <% multiple_choice_answers(card).each do |card| %>
+       <div id="answer_<%= i %>"><%= card.answer %></div>
+       <% end %>
     </div> 
+    <input type="hidden" value="<%= card.id %>"/>
   </div>
   <% end %>
 </div>
