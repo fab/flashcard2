@@ -23,14 +23,15 @@ $(document).ready(function() {
   // Change colour of selected button
 
   $('.answers').children().on('click', function (e){
-    console.log('howdy');
+    console.log($(this).siblings());
+    $(this).siblings().unbind('click');
     e.preventDefault();
   var card_id = $('.active').find('input').val();
   var answer = $(this).text();
   $(this).addClass('clicked');
-  console.log(card_id);
-  console.log(answer);
-  console.log($(this));
+  // console.log(card_id);
+  // console.log(answer);
+  // console.log($(this));
   $.ajax({
     type: 'post',
     url: '/check_answer',
@@ -38,13 +39,13 @@ $(document).ready(function() {
   }).done(function(data){
     console.log(data);
     if(data == "true"){
-      console.log($(this));
+      // console.log($(this));
       $('.clicked').addClass('correct');
     }else{
-      console.log($(this));
+      // console.log($(this));
       $('.clicked').addClass('wrong');
     }
-    setTimeout(nextCard(), 3000);
+    setTimeout(nextCard, 500);
   });
   });
 });

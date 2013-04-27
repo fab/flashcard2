@@ -1,6 +1,6 @@
 <div class="container" id="game_card">
   <div><%= @deck.name %></div>
-  <% @deck.cards.each_with_index do |card, i| %>
+  <% @deck.cards.shuffle.each_with_index do |card, i| %>
   <div class="hidden">
     <div id="definition_<%= i %>"><%= card.definition %></div>
     <div class="answers">
@@ -11,5 +11,4 @@
     <input type="hidden" value="<%= card.id %>"/>
   </div>
   <% end %>
-  <div id="next_card_btn">Next Card</div>
 </div>
