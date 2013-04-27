@@ -1,7 +1,5 @@
 <div class='container'>
-<ul>
 <% @decks.each do |deck| %>
-  <li><a href="/deck/<%=deck.id%>"><%= deck.name %></a></li>
+  <%=partial(:_profile_deck, :deck => deck) %>
 <% end %>
-</ul>
 </div>

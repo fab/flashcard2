@@ -3,7 +3,9 @@
 
   <ul>
     <% if session[:user_id] == nil %>
+    <li><a id="register_link" href="/register">Register</a></li>
     <li><a id="login_link" href="/login">Login</a></li>
+
     <% else %>
     <li><a href="/profile"><%= User.find(session[:user_id]).name %></a></li>
     <li><a href="/logout">Logout</a></li>
@@ -15,7 +17,6 @@
          <input id="password_header" type="password" name="password" placeholder="Password" />
          <input id="submit_header" type="submit" value="Submit" />
        </form>
-       <a id="register_link" href="/register">Register</a>
      </div>
    </ul>
 

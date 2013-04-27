@@ -2,10 +2,17 @@
   margin: auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
+  /*background-color: white;*/
+  border-radius: 15px;
 }
 
 th {
   text-align: left;
+}
+
+body {
+  background:url('/pool_table.png');
+
 }
 
 
@@ -17,11 +24,16 @@ header {
   background-color: #2B2D31;
   width: 100%;
   z-index: 1;
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
 }
 
 header h1 {
-  font-family: 'Fugaz One', cursive;
-  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: #F7FECD;
   float: left;
   padding: 0 0 0 30px;
   margin: 0;
@@ -56,27 +68,47 @@ header a {
 
 #login_box{
   position: absolute;
-  margin: 10px 0 0 -170px;
+  margin: 13px 0 0 -70px;
   background-color: #2B2D31;
   padding: 10px;
   -moz-border-radius: 15px;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
   display: none;
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
 }
 
-
-#register_link{
-  margin-top: -18px;
-  display: block;
-  color: white;
-  float: right;
-  padding-right: 30px;
-}
 
 #password_header {
   margin: 5px 0 7px 0;
 }
+
+#submit_header {
+  padding-top: 5px;
+  display: block;
+  color: white;
+  border: none;
+  background: none;
+}
+
+
+/* profile deck styling */
+
+.deck_preview{
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  background-color: red;
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+  box-sizing:border-box;
+  border: 5px solid white;
+}
+
+
 
 footer {
   width: 100%;
@@ -84,4 +116,8 @@ footer {
   bottom: 0;
   background-color: #2B2D31;
   color: white;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  padding-left: 30px;
 }
