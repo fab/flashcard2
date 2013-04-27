@@ -1,15 +1,16 @@
 $(document).ready(function() {
   var counter = 0;
-  var count = $('.hidden').length;
-  console.log(count);
+  var num_cards = $('.hidden').length;
   $('#definition_' + counter).parent().removeClass('hidden').addClass('active');
   $('.hidden').hide();
   $('#next_card_btn').on('click', function() {
-    if (count == count) {
+    counter += 1;
+    if (counter == num_cards) {
+      $('.active').hide();
+      alert('The deck is empty!')
       //display end of deck message
     }
     else {
-      counter += 1;
       $('.active').removeClass('active').addClass('hidden');
       $('#definition_' + counter).parent().removeClass('hidden').addClass('active');
       $('.hidden').hide();
