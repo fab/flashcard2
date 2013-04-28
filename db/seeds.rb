@@ -17,3 +17,7 @@ parse(filename, deck2)
 deck3 = Deck.create(name: 'US Presidents', category: 'History', image_url: '/obama.jpg')
 filename = APP_ROOT.join('db', 'us_presidents.txt')
 parse(filename, deck3)
+
+deck4 = Deck.create(name: 'One Card Deck', category: 'Test', image_url: '/obama.jpg')
+filename = APP_ROOT.join('db', 'test.txt')
+parse(filename, deck4)

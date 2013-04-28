@@ -2,9 +2,11 @@ $(document).ready(function() {
     var nextCard = function() {
     counter += 1;
     if (counter == num_cards) {
-      $('.active').hide();
-      alert('The deck is empty!');
+      // $('.active').hide();
+      window.location = "/game/results";
+      // alert('The deck is empty!');
       //display end of deck message
+      //forward user to results page
     }
     else {
       $('.active').removeClass('active').addClass('hidden');
