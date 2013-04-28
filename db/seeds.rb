@@ -21,3 +21,7 @@ parse(filename, deck3)
 deck4 = Deck.create(name: 'One Card Deck', category: 'Test', image_url: '/obama.jpg')
 filename = APP_ROOT.join('db', 'test.txt')
 parse(filename, deck4)
+
+deck5 = Deck.create(name: 'four card deck', category: 'Test', image_url: '/obama.jpg')
+filename = APP_ROOT.join('db', 'flashcard_samples3.txt')
+parse(filename, deck5)

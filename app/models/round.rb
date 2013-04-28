@@ -1,6 +1,6 @@
 class Round < ActiveRecord::Base
   # Remember to create a migration!
-  validates :user_id, :presence => true
-  belongs_to :user
+  validates :card_id, :presence => true
   belongs_to :card
+  belongs_to :game
 end
