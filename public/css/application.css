@@ -75,6 +75,10 @@ header a {
 }
 
 /* LOGIN BOX */
+.login_link{
+  color: white;
+}
+
 .login_box{
   position: absolute;
   margin: 13px 0 0 -70px;
@@ -103,6 +107,9 @@ header a {
 }
 
 /* REGISTER BOX */
+.register_link {
+  color: white;
+}
 .name_header{
   margin: 0 0 5px 0;
 }

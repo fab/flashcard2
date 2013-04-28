@@ -7,7 +7,7 @@
     <li><span class="register_link" >Register</span></li>
     <li><span class="login_link" >Login</span></li>
     <% else %>
-    <li><a href="/profile"><%= User.find(session[:user_id]).name %></a></li>
+    <li><a href="/"><%= User.find(session[:user_id]).name %></a></li>
     <li><a href="/logout">Logout</a></li>
     <% end %>
     <div class="login_box">
