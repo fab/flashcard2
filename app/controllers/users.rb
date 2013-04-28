@@ -1,6 +1,7 @@
 
 
 post '/login' do
+  p params
   user = User.authenticate(params["email"], params["password"])
   return 404 unless user
   session[:user_id] = user.id
@@ -12,16 +13,15 @@ get '/logout' do
   redirect '/'
 end
 
-get '/register' do
-  erb :registration
-end
-
 post '/register' do  
+  p params
   user = User.create(name: params["name"], 
                      email: params["email"], 
                      password: params["password"])
   @errors = user.errors.full_messages
-  return @errors if @errors.length > 0
+  if @errors.length > 0
+    return partial(:_errors, :errors => @errors)
+  end
   session[:user_id] = user.id
   redirect '/profile'
 end
@@ -29,7 +29,7 @@ end
 get '/profile' do
   @user = User.find(session[:user_id])
   @decks = Deck.all
-  erb :profile
+  partial(:profile, {:decks => @decks})
 end
 
 

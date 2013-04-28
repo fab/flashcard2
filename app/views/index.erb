@@ -1,3 +1,7 @@
-<div class="container" >
-  <div id="index_card"></div>
+<div class="container main" >
+  <% if session[:user_id] == nil %>
+    <div id="index_card"></div>
+  <% else %>
+    <%= partial :profile %>
+  <% end %>
 </div>

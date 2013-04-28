@@ -13,7 +13,6 @@ $(document).ready(function() {
       $('.active').show();
     }
   };
-  console.log('howdy1');
   var counter = 0;
   var num_cards = $('.hidden').length;
   $('#definition_' + counter).parent().removeClass('hidden').addClass('active');
@@ -29,9 +28,6 @@ $(document).ready(function() {
   var card_id = $('.active').find('input').val();
   var answer = $(this).text();
   $(this).addClass('clicked');
-  // console.log(card_id);
-  // console.log(answer);
-  // console.log($(this));
   $.ajax({
     type: 'post',
     url: '/check_answer',
@@ -39,10 +35,8 @@ $(document).ready(function() {
   }).done(function(data){
     console.log(data);
     if(data == "true"){
-      // console.log($(this));
       $('.clicked').addClass('correct');
     }else{
-      // console.log($(this));
       $('.clicked').addClass('wrong');
     }
     setTimeout(nextCard, 500);

@@ -1,25 +1,33 @@
-<header id="header">
+<header class="header">
+  
   <a href="/"><h1>FlashDeck</h1></a>
 
   <ul>
     <% if session[:user_id] == nil %>
-    <li><a id="register_link" href="/register">Register</a></li>
-    <li><a id="login_link" href="/login">Login</a></li>
-
+    <li><span class="register_link" >Register</span></li>
+    <li><span class="login_link" >Login</span></li>
     <% else %>
     <li><a href="/profile"><%= User.find(session[:user_id]).name %></a></li>
     <li><a href="/logout">Logout</a></li>
     <% end %>
-    <div id="login_box">
-     <div id="login_box_content">
-       <form id="login_form" action="/login" method="post">
-         <input id="email_header" type="email" name="email" placeholder="Email" />
-         <input id="password_header" type="password" name="password" placeholder="Password" />
-         <input id="submit_header" type="submit" value="Submit" />
-       </form>
-     </div>
-   </ul>
-
-
-   
- </header>
+    <div class="login_box">
+      <div class="login_box_content">
+        <form class="login_form" action="/login" method="post">
+          <input class="email_header" type="email" name="email" placeholder="Email" />
+          <input class="password_header" type="password" name="password" placeholder="Password" />
+          <input class="submit_header" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <div class="register_box">
+      <div class="register_box_content">
+        <form class="register_form" action="/register" method="post">
+          <input class="name_header" type="text" name="name" placeholder="Name" />
+          <input class="email_header" type="email" name="email" placeholder="Email" />
+          <input class="password_header" type="password" name="password" placeholder="Password" />
+          <input class="submit_header" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+  </ul>
+</header>

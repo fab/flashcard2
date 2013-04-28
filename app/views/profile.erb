@@ -1,5 +1,5 @@
 <div class='container'>
-<% @decks.each do |deck| %>
+<% Deck.all.each do |deck| %>
   <%=partial(:_profile_deck, :deck => deck) %>
 <% end %>
 </div>

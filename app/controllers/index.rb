@@ -1,7 +1,7 @@
 get '/' do
-  if session[:user_id] 
-    redirect '/profile'
-  else
-    erb :index
-  end
+  erb :index
+end
+
+get '/header' do
+  partial :_header
 end
