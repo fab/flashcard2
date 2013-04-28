@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var nextCard = function() {
+    var nextCard = function() {
     counter += 1;
     if (counter == num_cards) {
       $('.active').hide();
@@ -36,10 +36,19 @@ $(document).ready(function() {
     console.log(data);
     if(data == "true"){
       $('.clicked').addClass('correct');
+      var jkai = $('#right_jkai');
     }else{
       $('.clicked').addClass('wrong');
+      var jkai = $('#wrong_jkai');
     }
-    setTimeout(nextCard, 500);
+    if (jkai.is(":visible")) {
+      jkai.slideUp('slow');
+    }
+    else {
+      jkai.slideDown('slow');
+    }
+    setTimeout(function(){$('.pop_up_jkai').slideUp('fast');},2000);
+    setTimeout(nextCard, 2000);
   });
   });
 });

@@ -34,8 +34,28 @@
   background-color: #FFAABB;
 }
 
+#deck_name {
+  padding-bottom: 20px;
+  color: black;
+  font-style: bold;
+  font-size: 2em;
+/*  text-shadow: -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff; */
+  text-align: center;
+}
+
 #next_card_btn {
   position: absolute;
   top: 600px;
   left: 600px;
+}
+
+.pop_up_jkai {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: none;
+  width: 400px;
 }
