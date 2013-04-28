@@ -134,8 +134,8 @@ header a {
 /* profile deck styling */
 
 .deck_preview{
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 5px;
   box-sizing:border-box;
   border: 5px solid white;
@@ -146,9 +146,9 @@ header a {
   display: none;
   color: white;
   position: absolute;
-  margin-top: -180px;
-  width: 180px;
-  height: 180px;
+  margin-top: -150px;
+  width: 150px;
+  height: 150px;
   /*z-index: 5;*/
   background-color: #2B2D31;
   opacity: .9;
@@ -175,10 +175,10 @@ header a {
 
 }
 
-#deck_holder{
+.deck_holder{
   display: inline-block;
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   margin: 10px;
 }
 /* footer */

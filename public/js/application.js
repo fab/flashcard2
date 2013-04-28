@@ -10,18 +10,10 @@ var hideInfo = function(){
   });
 };
 
-
-
 $(document).on('mouseover', '.deck_preview', function(){showInfo();});
 $(document).on('mouseout', '.deck_info', function(){hideInfo();});
-$(document).ready(function() {
-  $('.deck_holder').click(function(){
-    console.log($(this).serialize());
-    console.log('help me');
-  });
-
-  $('.deck_info').click(function(){
+$(document).on('click', '.deck_info', function(){
+    console.log('You clicked deck_info');
     var deck_id = $(this).find('.deck_id').val();
-    window.location = '/deck/'+ deck_id +'/play'
+    window.location = '/deck/'+ deck_id +'/play';
   });
-});
