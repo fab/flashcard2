@@ -20,8 +20,9 @@
   </div>
   <% end %>
 
+  <div id='time_taken'>This game took you <%= (@total_time/60).to_i %> minutes and <%= (@total_time%60).to_i %> seconds.
+  </div>
   
-
   <div id='times_played'>You've played this deck <%= Game.where('deck_id = ?', @game.deck.id).count %> times.
   </div>
 </div>
