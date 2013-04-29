@@ -91,6 +91,7 @@ header a {
   margin: 13px 0 0 -70px;
   background-color: #2B2D31;
   padding: 10px;
+
   -moz-border-radius: 15px;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -98,6 +99,12 @@ header a {
   -moz-box-shadow: 3px 3px 4px #000;
   -webkit-box-shadow: 3px 3px 4px #000;
   box-shadow: 3px 3px 4px #000;
+}
+
+.login_box_errors{
+  color: white;
+  padding-bottom: 5px;
+
 }
 
 
@@ -135,6 +142,10 @@ header a {
   -moz-box-shadow: 3px 3px 4px #000;
   -webkit-box-shadow: 3px 3px 4px #000;
   box-shadow: 3px 3px 4px #000;
+}
+.register_box_errors{
+  color: white;
+  padding-bottom: 5px;
 }
 /* profile deck styling */
 

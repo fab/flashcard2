@@ -1,5 +1,5 @@
 <header class="header">
-  
+
   <a href="/"><h1>FlashDeck</h1></a>
 
   <ul>
@@ -12,6 +12,7 @@
     <% end %>
     <div class="login_box">
       <div class="login_box_content">
+        <div class="login_box_errors"></div>
         <form class="login_form" action="/login" method="post">
           <input class="email_header" type="email" name="email" placeholder="Email" />
           <input class="password_header" type="password" name="password" placeholder="Password" />
@@ -21,6 +22,7 @@
     </div>
     <div class="register_box">
       <div class="register_box_content">
+        <div class="register_box_errors"></div>
         <form class="register_form" action="/register" method="post">
           <input class="name_header" type="text" name="name" placeholder="Name" />
           <input class="email_header" type="email" name="email" placeholder="Email" />

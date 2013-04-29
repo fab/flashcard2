@@ -13,17 +13,18 @@ get '/logout' do
   redirect '/'
 end
 
-post '/register' do  
+post '/register' do
   p params
-  user = User.create(name: params["name"], 
-                     email: params["email"], 
+  user = User.create(name: params["name"],
+                     email: params["email"],
                      password: params["password"])
   @errors = user.errors.full_messages
   if @errors.length > 0
     return partial(:_errors, :errors => @errors)
-end
-  session[:user_id] = user.id
-  redirect '/profile'
+  else
+    session[:user_id] = user.id
+    redirect '/profile'
+  end
 end
 
 get '/profile' do
