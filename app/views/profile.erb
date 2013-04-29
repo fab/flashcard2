@@ -1,5 +1,16 @@
 <div class='container'>
+Lifetime stats:
+
+Total correct = 
+<% correct = Round.joins(:card, :game).where("games.user_id = ? and rounds.correct = ?", session[:user_id], true).count %>
+<% total = Round.joins(:card, :game).where("games.user_id = ?", session[:user_id]).count %>
+
+Correct = <%= correct %>
+Total = <%= total %>
+Percent correct = <%= correct/total.to_f * 100 %>%
+
 <% Deck.all.each do |deck| %>
   <%=partial(:_profile_deck, :deck => deck) %>
 <% end %>
+
 </div>
