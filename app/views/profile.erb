@@ -10,9 +10,13 @@ Correct: <%= correct %><br>
 Total:  <%= total %><br>
 Percent correct: <%= (correct/total.to_f * 100).round %>%<br>
 
-Toughest Card: <%= 
-Card.find(Round.joins(:card, :game).select('rounds.card_id, count(rounds.card_id)').where("games.user_id = ? and rounds.correct = false", 2).group('rounds.card_id').order('count DESC').limit(1).first.card_id).definition 
+<%
+card = Card.find(Round.joins(:card, :game).select('rounds.card_id, count(rounds.card_id)').where("games.user_id = ? and rounds.correct = false", 2).group('rounds.card_id').order('count DESC').limit(1).first.card_id) 
 %>
+<a href="/card/<%= card.id %>">
+Toughest Card 
+</a>
+
 </div>
 <br>
 

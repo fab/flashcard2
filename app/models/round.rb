@@ -3,4 +3,5 @@ class Round < ActiveRecord::Base
   validates :card_id, :presence => true
   belongs_to :card
   belongs_to :game
+  has_many :user, :through => :game
 end
