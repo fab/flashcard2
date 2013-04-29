@@ -3,7 +3,7 @@
   <div id='percentile'>
   <% correct = @game.rounds.where("correct = ?", true).count %>
   <% total = @game.rounds.count %>
-  <h1><%= ((correct / total.to_f) * 100).to_i %>% </h1>
+  <h1><%= ((correct / total.to_f) * 100).round.to_i %>% </h1>
   <p>(<%= correct %>/<%= total %>)</p>
   </div>
 
