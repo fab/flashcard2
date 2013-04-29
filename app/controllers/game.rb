@@ -1,8 +1,9 @@
 get '/deck/:id/play' do
-  session[:game_id] = nil
+  session[:game_id] = nil # Isn't this line redundant since we overwrite on line 5?
   @deck = Deck.find(params[:id])
   @game = Game.create(user_id: session[:user_id], deck_id: @deck.id) 
   session[:game_id] = @game.id
+  session[:start_time] = Time.now
   erb :game
 end
 
@@ -14,6 +15,8 @@ end
 
 get '/game/results' do
   @game = Game.find(session[:game_id])
+  @total_time = Time.now - session[:start_time]
+  puts @total_time.class
   erb :results
 end
 

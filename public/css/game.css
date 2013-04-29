@@ -111,6 +111,10 @@
   display: inline-block;
 }
 
+#time_taken {
+  text-align: center;
+}
+
 #times_played {
   text-align: center;
 }
