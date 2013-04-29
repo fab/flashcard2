@@ -113,8 +113,10 @@
 
 #time_taken {
   text-align: center;
+  margin-bottom: 15px;
 }
 
 #times_played {
   text-align: center;
+  margin-bottom: 15px;
 }
