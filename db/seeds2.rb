@@ -20,14 +20,12 @@ filename = APP_ROOT.join('db', 'us_presidents.txt')
 parse(filename, deck3)
 
 
-def seed_users(names)
+def seed_users
   names.each do |name| 
-    stuck_together = name.downcase.gsub(/\s/, '')
-    User.create(name: name, email: "#{stuck_together}@dbc.com", password: "password", image: "#{stuck_together}.jpeg")
+    User.create(name: Faker::Name.name, email: Faker::Internet.email, password: "password")
   end
 end
-users = ["Adam Sartell", "Allen Lee", "Amy Lukima", "Angie Bui", "Chris Torstenson", "Fab Mackojc", "Jkai Hsu", "Kahley Avalon Emerson", "Kristine Hines", "Michael Malchak", "Patrick Scanlan", "Robby Fairclough", "Robert Kim", "Ryan Salomon", "Mac Browning", "Sean Miller", "Sidney Zhang", "Stephen Nguyen", "Sam Miyakawa", "Vincent Storme"]
-seed_users(users)
+seed_users
 
 
 
@@ -44,7 +42,3 @@ def play_games(num)
   end
 end
 play_games(1000)
-
-deck3 = Deck.create(name: 'US Presidents', category: 'History', image_url: '/obama.jpg')
-filename = APP_ROOT.join('db', 'us_presidents.txt')
-parse(filename, deck3)

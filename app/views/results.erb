@@ -14,7 +14,11 @@
     <% wrong_rounds = @game.rounds.where("correct = ?", false) %>
     
     <% wrong_rounds.each do |round| %>
-      <div class='wrong_card'><%= round.card.definition %></div>
+
+      <div class='wrong_card'>
+        <input class="wrong_card_id" type="hidden" value="<%= round.card.id %>">
+        <%= round.card.definition %>
+      </div>
     <% end %>
   
   </div>

@@ -17,8 +17,20 @@
   <p>Total times missed: <%= @player_wrong_count %>
   <p>Total times played: <%= @player_played_count %>
 <p>
-  <p>This card has been answered incorrectly <%= (@player_wrong_count/@player_played_count.to_f * 100).round %>% of the time.
+  <p>You've answered this card incorrectly <%= (@player_wrong_count/@player_played_count.to_f * 100).round %>% of the time.
+
+   
   </div>
+
+  <div class="biggest_losers">
+    <h2>Biggest Losers:</h2>
+    <% @biggest_losers.each do |l| %>
+      <img class="loser_images" src="/images/<%= User.find(l.user_id).image %>">
+    <% end %>
+  </div>
+
+
+
 
 </div>
 

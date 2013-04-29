@@ -1,24 +1,26 @@
 <div class='container'>
-
-
-<div class ="lifetime_stats">
-<h1>Lifetime Stats</h1>
-<% correct = Round.joins(:card, :game).where("games.user_id = ? and rounds.correct = ?", session[:user_id], true).count %>
 <% total = Round.joins(:card, :game).where("games.user_id = ?", session[:user_id]).count %>
+<% if total > 0%>
+  <div class ="lifetime_stats">
+    <h1>Lifetime Stats</h1>
+    <% correct = Round.joins(:card, :game).where("games.user_id = ? and rounds.correct = ?", session[:user_id], true).count %>
+    
 
-Correct: <%= correct %><br>
-Total:  <%= total %><br>
-Percent correct: <%= (correct/total.to_f * 100).round %>%<br>
+    Correct: <%= correct %><br>
+    Total:  <%= total %><br>
+    Percent correct: <%= (correct/total.to_f * 100).round %>%<br>
 
-<%
-card = Card.find(Round.joins(:card, :game).select('rounds.card_id, count(rounds.card_id)').where("games.user_id = ? and rounds.correct = false", 2).group('rounds.card_id').order('count DESC').limit(1).first.card_id) 
-%>
-<a href="/card/<%= card.id %>">
-Toughest Card 
-</a>
+    <%
+    card = Card.find(Round.joins(:card, :game).select('rounds.card_id, count(rounds.card_id)').where("games.user_id = ? and rounds.correct = false", 2).group('rounds.card_id').order('count DESC').limit(1).first.card_id) 
+    %>
+  <a href="/card/<%= card.id %>">
+  Toughest Card 
+  </a>
 
-</div>
-<br>
+  </div>
+  <br>
+<% end %>
+
 
 <% Deck.all.each do |deck| %>
   <%=partial(:_profile_deck, :deck => deck) %>

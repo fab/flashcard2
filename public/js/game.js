@@ -60,5 +60,11 @@ $(document).ready(function() {
          setTimeout(nextCard, 2000);
     });
   });
+
+
+  $('.wrong_card').click(function(){
+    var card_id = $(this).find('.wrong_card_id').val();
+    window.open('/card/'+card_id);
+  });
 });
 

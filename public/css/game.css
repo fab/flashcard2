@@ -109,6 +109,8 @@
   width: 30ex;
   text-align: center;
   display: inline-block;
+  cursor: hand;
+  cursor: pointer;
 }
 
 #time_taken {
