@@ -4,6 +4,7 @@
   padding: 0px 20px 20px 20px;
   /*background-color: white;*/
   border-radius: 15px;
+  margin-bottom: 20px;
 }
 
 th {
@@ -190,7 +191,6 @@ header a {
 
 
 
-/* footer */
 
 .lifetime_stats {
   font-size: 20px;
@@ -228,11 +228,12 @@ header a {
 
 .loser_images {
   box-shadow: 0px 0px 10px #fff;
-  margin: 5px;
+  margin: 4px;
 }
 
 /**/
 
+/* footer */
 footer {
   width: 100%;
   position: fixed;
