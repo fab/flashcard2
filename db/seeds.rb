@@ -44,7 +44,3 @@ def play_games(num)
   end
 end
 play_games(1000)
-
-deck3 = Deck.create(name: 'US Presidents', category: 'History', image_url: '/obama.jpg')
-filename = APP_ROOT.join('db', 'us_presidents.txt')
-parse(filename, deck3)
