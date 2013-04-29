@@ -9,6 +9,7 @@ $(document).ready(function() {
       //forward user to results page
     }
     else {
+      $('#num_cards_remaining').html('Cards remaining: ' + (num_cards - counter));
       $('.active').removeClass('active').addClass('hidden');
       $('#definition_' + counter).parent().removeClass('hidden').addClass('active');
       $('.hidden').hide();

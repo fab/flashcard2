@@ -120,3 +120,10 @@
   text-align: center;
   margin-bottom: 15px;
 }
+
+#num_cards_remaining {
+  position: fixed;
+  right: 100px;
+  top: 70px;
+  font-size: 20px;
+}
