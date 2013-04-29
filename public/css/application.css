@@ -134,8 +134,8 @@ header a {
 /* profile deck styling */
 
 .deck_preview{
-  width: 150px;
-  height: 150px;
+  width: 177px;
+  height: 177px;
   border-radius: 5px;
   box-sizing:border-box;
   border: 5px solid white;
@@ -146,9 +146,9 @@ header a {
   display: none;
   color: white;
   position: absolute;
-  margin-top: -150px;
-  width: 150px;
-  height: 150px;
+  margin-top: -177px;
+  width: 177px;
+  height: 177px;
   /*z-index: 5;*/
   background-color: #2B2D31;
   opacity: .9;
@@ -179,11 +179,28 @@ header a {
 
 .deck_holder{
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 177px;
+  height: 177px;
   margin: 10px;
 }
 /* footer */
+
+.lifetime_stats {
+  font-size: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  /*width: 490px;*/
+  border: 2px solid black;
+  color: #2B2D31;
+
+}
+
+.lifetime_stats h1 {
+  color: #2B2D31;
+  padding-top: 0px;
+  margin-top: 0px;
+}
 
 footer {
   width: 100%;

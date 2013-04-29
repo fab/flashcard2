@@ -1,18 +1,19 @@
 <div class='container'>
-Lifetime stats:
 
-Total correct = 
+
+<div class ="lifetime_stats">
+<h1>Lifetime Stats</h1>
 <% correct = Round.joins(:card, :game).where("games.user_id = ? and rounds.correct = ?", session[:user_id], true).count %>
 <% total = Round.joins(:card, :game).where("games.user_id = ?", session[:user_id]).count %>
 
-Correct = <%= correct %>
-Total = <%= total %>
-Percent correct = <%= correct/total.to_f * 100 %>%
+Correct: <%= correct %><br>
+Total:  <%= total %><br>
+Percent correct: <%= (correct/total.to_f * 100).round %>%<br>
 
-Toughest Card = <%= 
+Toughest Card: <%= 
 Card.find(Round.joins(:card, :game).select('rounds.card_id, count(rounds.card_id)').where("games.user_id = ? and rounds.correct = false", 2).group('rounds.card_id').order('count DESC').limit(1).first.card_id).definition 
 %>
-
+</div>
 <br>
 
 <% Deck.all.each do |deck| %>
