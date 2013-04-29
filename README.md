@@ -1,15 +1,15 @@
 #####Version 1.0
 
 #Courtesy of:
-- @seanbr
-- @samsamskies
-- @fmackojc
-- @patscan
+- [@seanbr](https://github.com/seanbr)
+- [@samsamskies](https://github.com/SamSamskies)
+- [@fmackojc](https://github.com/fmackojc)
+- [@patscan](https://github.com/patscan)
 
 
 
 #Credit to:
-@stephenitis for photoshop skills.
+[@stephenitis](https://github.com/stephenitis) for photoshop skills.
 
 
 
