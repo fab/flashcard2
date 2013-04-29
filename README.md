@@ -1,15 +1,15 @@
 #####Version 1.0
 
 #Courtesy of:
--Mac Browning
--Sam Samskies
--Fab Mackojc
--Pat Scanlan
+- @seanbr
+- @samsamskies
+- @fmackojc
+- @patscan
 
 
 
 #Credit to:
-Stephen Nguyen for photoshop skills.
+@stephenitis for photoshop skills.
 
 
 
