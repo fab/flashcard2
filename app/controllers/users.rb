@@ -21,7 +21,7 @@ post '/register' do
   @errors = user.errors.full_messages
   if @errors.length > 0
     return partial(:_errors, :errors => @errors)
-  end
+end
   session[:user_id] = user.id
   redirect '/profile'
 end
@@ -29,7 +29,7 @@ end
 get '/profile' do
   @user = User.find(session[:user_id])
   @decks = Deck.all
-  partial(:profile, {:decks => @decks})
+  partial(:profile, {:decks => @decks })
 end
 
 

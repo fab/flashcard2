@@ -9,6 +9,12 @@ Correct = <%= correct %>
 Total = <%= total %>
 Percent correct = <%= correct/total.to_f * 100 %>%
 
+Toughest Card = <%= 
+Card.find(Round.joins(:card, :game).select('rounds.card_id, count(rounds.card_id)').where("games.user_id = ? and rounds.correct = false", 2).group('rounds.card_id').order('count DESC').limit(1).first.card_id).definition 
+%>
+
+<br>
+
 <% Deck.all.each do |deck| %>
   <%=partial(:_profile_deck, :deck => deck) %>
 <% end %>
