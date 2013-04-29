@@ -1,14 +1,27 @@
 <div class='container'>
-  <h1>BOOYAH! Here's how you did:</h1>
+  <div id="deck_name"><%= @game.deck.name %></div>
+  <div id='percentile'>
   <% correct = @game.rounds.where("correct = ?", true).count %>
   <% total = @game.rounds.count %>
-  Percent correct: <%= (correct / total.to_f).round(2) * 100 %>% (<%= correct %>/<%= total %>)<br> 
-  These are the cards you got wrong:<br/> 
+  <h1><%= ((correct / total.to_f) * 100).to_i %>% </h1>
+  <p>(<%= correct %>/<%= total %>)</p>
+  </div>
 
-  <% wrong_rounds = @game.rounds.where("correct = ?", false) %>
-  <% wrong_rounds.each do |round| %>
-    <%= round.card.definition %><br/>
+  <% unless (correct - total) == 0 %>  
+  <div id='wrong_list'>
+    <p>These are the cards you got wrong:</p>
+ 
+    <% wrong_rounds = @game.rounds.where("correct = ?", false) %>
+    
+    <% wrong_rounds.each do |round| %>
+      <div class='wrong_card'><%= round.card.definition %></div>
+    <% end %>
+  
+  </div>
   <% end %>
 
-  You've played this deck: <%= Game.where('deck_id = ?', @game.deck.id).count %> times
+  
+
+  <div id='times_played'>You've played this deck <%= Game.where('deck_id = ?', @game.deck.id).count %> times.
+  </div>
 </div>
