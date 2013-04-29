@@ -1,5 +1,5 @@
 <div class="container main" >
-  
+
   <div class ="lifetime_stats">
   <h1>Card info:</h1>
   <p>Deck: <%= @card.deck.name %>
@@ -12,6 +12,7 @@
 <p>
   <p>This card has been answered incorrectly <%= (@wrong_count/@played_count.to_f * 100).round %>% of the time.
   <p>
+<% if @player_played_count > 0 %>
   <h2>Personal stats:</h2>
 <p>
   <p>Total times missed: <%= @player_wrong_count %>
@@ -19,7 +20,7 @@
 <p>
   <p>You've answered this card incorrectly <%= (@player_wrong_count/@player_played_count.to_f * 100).round %>% of the time.
 
-   
+<% end %>
   </div>
 
   <div class="biggest_losers">
