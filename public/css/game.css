@@ -61,3 +61,62 @@
   display: none;
   width: 400px;
 }
+
+#percentile {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  box-shadow: 5px 5px 5px black;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  color: #BADA55;
+  text-align: center;
+}
+
+#percentile h1 {
+  font-size: 90px;
+  padding-top: 30px;
+  margin: 0;
+}
+
+#percentile p {
+  font-size: 32px;
+  padding-top: 30px;
+  margin: 0;
+}
+
+#wrong_list {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.wrong_card {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #DCDCDC;
+  margin-bottom: 10px;
+  margin-left: 10px; 
+  margin-right: 10px; 
+  width: 30ex;
+  text-align: center;
+  display: inline-block;
+}
+
+#time_taken {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#times_played {
+  text-align: center;
+  margin-bottom: 15px;
+}
